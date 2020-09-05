@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        tools:context=".activity.EditUserActivity">
+
+        <!--..........................................-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/spacing_medium"
+            android:background="#223458"
+
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/logoImg"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="@dimen/spacing_medium"
+                android:layout_weight=".2"
+                android:background="@drawable/logo_afcks" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_weight=".8"
+                android:gravity="left|center|center_horizontal"
+                android:paddingLeft="@dimen/spacing_medium"
+                android:text="User Details"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/orderedMenu1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/title_font"
+                android:background="@drawable/dailog_backgrnd">
+
+                <LinearLayout
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/viewTxt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight=".8"
+                            android:text="Update user"
+                            android:textColor="#ffffff"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:background="#ffffff" />
+                </LinearLayout>
+
+                <ScrollView
+                    android:id="@+id/regScroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title">
+
+                    <LinearLayout
+                        android:id="@+id/orderedMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            android:weightSum="1">
+
+                            <RadioGroup
+                                android:id="@+id/radioGroup"
+                                android:layout_width="0dp"
+                                android:layout_weight=".9"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginBottom="2dp"
+                                android:layout_marginTop= "10dp"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:id="@+id/icon"
+                                    android:layout_width="0dp"
+                                    android:layout_weight=".5"
+                                    android:layout_height="30dp"
+                                    android:tint="@color/white"
+                                    android:src="@drawable/boy"/>
+                                <TextView
+                                    android:id="@+id/weekofday"
+                                    android:layout_width="0dp"
+                                    android:layout_weight=".5"
+                                    android:text="He"
+                                    android:gravity="center"
+                                    android:layout_height="30dp"
+                                    />
+
+                                <RadioButton
+                                    android:id="@+id/male"
+                                    android:layout_width="0dp"
+                                    android:layout_weight=".5"
+                                    android:layout_height="30dp" />
+
+                                <ImageView
+                                    android:id="@+id/boy"
+                                    android:layout_width="0dp"
+                                    android:layout_weight=".5"
+                                    android:layout_height="30dp"
+                                    android:tint="@color/white"
+                                    android:src="@drawable/girl"/>
+                                <TextView
+
+                                    android:layout_width="0dp"
+                                    android:layout_weight=".5"
+                                    android:text="She"
+                                    android:gravity="center"
+                                    android:layout_height="30dp"
+                                    />
+
+                                <RadioButton
+                                    android:id="@+id/female"
+                                    android:layout_width="0dp"
+                                    android:layout_weight=".5"
+                                    android:layout_height="30dp" />
+                            </RadioGroup>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <EditText
+                                android:id="@+id/userIdEdtTxt"
+                                android:layout_width="0dp"
+                                android:layout_weight=".5"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="2dp"
+                                android:layout_marginBottom="2dp"
+                                android:background="#E0DADA"
+                                android:drawablePadding="5dp"
+                                android:hint="*User Id"
+                                android:inputType="textCapWords"
+                                android:paddingLeft="6dp"
+                                android:singleLine="true"
+                                android:textAllCaps="true"
+                                android:textColor="@color/textcolor"
+                                android:textColorHint="@color/color_faintgray" />
+                            <EditText
+                                android:id="@+id/phEdtTxt"
+                                android:layout_width="0dp"
+                                android:layout_weight=".5"
+                                android:layout_height="40dp"
+
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginBottom="2dp"
+                                android:background="#E0DADA"
+                                android:drawablePadding="5dp"
+                                android:hint="*Mobile Number"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:paddingLeft="6dp"
+                                android:singleLine="true"
+                                android:textColor="@color/textcolor"
+                                android:textColorHint="@color/color_faintgray" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+                            <EditText
+                                android:id="@+id/nameEdtTxt"
+                                android:layout_width="0dp"
+                                android:layout_weight=".5"
+                                android:layout_height="40dp"
+                                android:layout_marginRight="2dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="2dp"
+                                android:background="#E0DADA"
+                                android:drawablePadding="5dp"
+                                android:hint="*First Name"
+                                android:inputType="textCapSentences"
+                                android:paddingLeft="6dp"
+                                android:singleLine="true"
+                                android:textColor="@color/textcolor"
+                                android:textColorHint="@color/color_faintgray" />
+                            <EditText
+                                android:id="@+id/lastNameEdtTxt"
+                                android:layout_width="0dp"
+                                android:layout_weight=".5"
+                                android:layout_height="40dp"
+
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginBottom="2dp"
+                                android:background="#E0DADA"
+                                android:drawablePadding="5dp"
+                                android:hint="*Last Name"
+                                android:inputType="textCapSentences"
+                                android:paddingLeft="6dp"
+                                android:singleLine="true"
+                                android:textColor="@color/textcolor"
+                                android:textColorHint="@color/color_faintgray" />
+
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/nameTxtView"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="#E0DADA"
+                            android:drawablePadding="5dp"
+                            android:gravity="center|left"
+                            android:paddingLeft="6dp"
+                            android:text=""
+                            android:textColor="@color/textcolor"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/lastNameTxtView"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="#E0DADA"
+                            android:drawablePadding="5dp"
+                            android:gravity="center|left"
+                            android:inputType="textCapSentences"
+                            android:paddingLeft="6dp"
+                            android:text=""
+                            android:textColor="@color/textcolor"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/phTxtView"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="#E0DADA"
+                            android:drawablePadding="5dp"
+                            android:gravity="center|left"
+                            android:maxLength="10"
+                            android:paddingLeft="6dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/textcolor"
+                            android:visibility="gone" />
+
+                        <EditText
+                            android:id="@+id/emailEdtTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="#E0DADA"
+                            android:drawablePadding="5dp"
+                            android:hint="*Email Id"
+                            android:inputType="textEmailAddress"
+                            android:paddingLeft="6dp"
+                            android:singleLine="true"
+                            android:textColor="@color/textcolor"
+                            android:textColorHint="@color/color_faintgray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight=".6"
+                                android:drawablePadding="5dp"
+                                android:layout_marginLeft="15dp"
+                                android:gravity="center|left"
+                                android:paddingLeft="6dp"
+                                android:text="Provide banking options"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <CheckBox
+                                android:id="@+id/chkSelectedEmpFees"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".1"
+                                android:button="@drawable/custom_checkbox_design" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight=".2"
+                                android:gravity="center|left"
+                                android:text="WFM"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <CheckBox
+                                android:id="@+id/chkSelectedEmpWFH"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="15dp"
+                                android:layout_weight=".1"
+                                android:button="@drawable/custom_checkbox_design" />
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight=".4"
+                                android:drawablePadding="5dp"
+                                android:gravity="center|left"
+                                android:paddingLeft="6dp"
+                                android:text="Shift Status"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <Spinner
+                                android:id="@+id/spnrType"
+                                android:layout_width="0dp"
+                                android:layout_height="41dp"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_weight=".6"
+                                android:background="#E0DADA"
+                                android:spinnerMode="dialog"
+                                android:textColor="#2f4f4f"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight=".4"
+                                android:drawablePadding="5dp"
+                                android:gravity="center|left"
+                                android:paddingLeft="6dp"
+                                android:text="Enter Year Leaves"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/leavesEdtTxt"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_weight=".6"
+                                android:background="#E0DADA"
+                                android:drawablePadding="5dp"
+                                android:hint="Enter Leaves"
+                                android:inputType="number"
+                                android:paddingLeft="6dp"
+                                android:singleLine="true"
+                                android:textColor="@color/textcolor"
+                                android:textColorHint="@color/color_faintgray" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/placeBtn"
+                            android:layout_width="120dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="6dp"
+                            android:background="#556199"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="Update"
+                            android:textAllCaps="false"
+                            android:textColor="@color/back_c"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </ScrollView>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
